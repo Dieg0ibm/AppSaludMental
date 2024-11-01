@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { FaHome, FaShoppingCart, FaBars } from 'react-icons/fa'
 
 export const NavBar = () => {
   const navLinkClass = ({ isActive }) => {
@@ -9,30 +10,28 @@ export const NavBar = () => {
   }
   return (
     <nav className='nav-bar'>
-      <NavLink
-        className={navLinkClass}
-        to='/'
-      >
-        Inicio
+      {/* <h1 className='nav-bar__title'>aplicación salud mental</h1> */}
+
+      <NavLink className={navLinkClass} to='/' aria-label='Inicio'>
+        <FaHome size={24} />
       </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/lightbulb'
-      >
-        Ampolleta
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/tienda'
-      >
-        Tienda
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/configuraciones'
-      >
-        Configuraciones
-      </NavLink>
+
+      <div className="nav-bar__right-links">
+        <NavLink
+          className={navLinkClass}
+          to='/lightbulb'
+        >
+          Ampolleta
+        </NavLink>
+
+        <NavLink className={navLinkClass} to='/tienda' aria-label='Tienda'>
+          <FaShoppingCart size={24} /> 
+        </NavLink>
+
+        <NavLink className={navLinkClass} to='/configuraciones' aria-label='Configuraciones'>
+          <FaBars size={24} /> {/* Use another icon or same icon for configurations */}
+        </NavLink>
+      </div>
     </nav>
   )
 }

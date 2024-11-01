@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 const questions = {
   estrés: [
-    { id: 1, question: "¿Cómo te sientes emocionalmente hoy?", type: "dropdown", options: ["Feliz", "Triste", "Ansioso", "Enojado"] },
+    { id: 1, question: "¿Cómo te sientes?", type: "dropdown", options: ["Feliz", "Triste", "Ansioso", "Enojado"] },
     { id: 2, question: "Califica tu nivel de estrés de 1 a 10:", type: "slider" },
-    { id: 3, question: "¿Has tenido algún desencadenante de estrés hoy?", type: "switch" },
+    { id: 3, question: "¿Cuál ha sido tu mayor fuente de estrés estos últimos días", type: "dropdown", options: ["Estudio/Trabajo", "Familia", "Salud", "Finanzas", "Otros"] },
   ],
   sueño: [
     { id: 4, question: "¿Cuántas horas dormiste anoche?", type: "input" },
@@ -13,9 +13,9 @@ const questions = {
     { id: 6, question: "¿Cómo calificarías la calidad de tu sueño?", type: "dropdown", options: ["Muy mala", "Mala", "Regular", "Buena", "Muy buena"] },
   ],
   ejercicio: [
-    { id: 7, question: "¿Has realizado actividad física hoy?", type: "switch" },
     { id: 8, question: "¿Cuánto tiempo dedicaste a hacer ejercicio?", type: "input" },
-    { id: 9, question: "¿Qué tipo de ejercicio realizaste?", type: "dropdown", options: ["Correr", "Nadar", "Gimnasio", "Yoga"] },
+    { id: 9, question: "¿Qué tipo de ejercicio realizaste?", type: "dropdown", options: ["Fuerza", "Correr", "Deporte"] },
+    { id: 10, question: "¿Cuántos pasos llevas hoy?", type: "input" },
   ]
 };
 
@@ -35,8 +35,13 @@ export const FormPage = () => {
     else {
       alert('Gracias por completar la encuesta!')
       navigate('/');
-
     }
+  };
+
+  const handlePreviousCategory = () => {
+    if (currentCategory === 'ejercicio') setCurrentCategory('sueño');
+    else if (currentCategory === 'sueño') setCurrentCategory('estrés');
+    else if (currentCategory === 'estrés') navigate('/');
   };
 
   return (
@@ -47,7 +52,17 @@ export const FormPage = () => {
         <div key={q.id}>
           <p>{q.question}</p>
           {q.type === 'input' && <input type="text" onChange={(e) => handleResponseChange(q.id, e.target.value)} />}
-          {q.type === 'slider' && <input type="range" min="1" max="10" onChange={(e) => handleResponseChange(q.id, e.target.value)} />}
+          {q.type === 'slider' && (
+            <div>
+              <input 
+                type="range" 
+                min="1" 
+                max="10" 
+                onChange={(e) => handleResponseChange(q.id, e.target.value)} 
+              />
+              <span>{responses[q.id] || 0}</span>
+            </div>
+          )}
           {q.type === 'switch' && <input type="checkbox" onChange={(e) => handleResponseChange(q.id, e.target.checked)} />}
           {q.type === 'dropdown' && (
             <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
@@ -56,8 +71,10 @@ export const FormPage = () => {
             </select>
           )}
         </div>
+
       ))}
       <div className="button-container">
+        <button onClick={handlePreviousCategory}>Atrás</button>
         <button onClick={handleNextCategory}>Siguiente</button>
       </div>
     </div>

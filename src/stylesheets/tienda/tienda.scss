@@ -3,6 +3,14 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+
+  .tienda-titulo {
+    font-size: 24px; // Tamaño del texto del título
+    color: #333; // Color del texto
+    margin-bottom: 5px; // Espacio entre el título y los artículos
+    width: 1000px;
+    text-align: center;
+  }
 }
 
 .tienda-item {
@@ -61,4 +69,5 @@
       background-color: #23d5c0;
     }
   }
+  
 }

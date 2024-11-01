@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCoins } from "react-icons/fa";
 
-const TiendaItem = ({ nombre, precio, icono }) => {
+const TiendaItem = ({ nombre, precio, icono, onComprar }) => {
   return (
     <div className="tienda-item">
       <div className="icono-contenedor">
@@ -12,7 +12,7 @@ const TiendaItem = ({ nombre, precio, icono }) => {
         <FaCoins size={24} />
         <span>{precio}</span>
       </div>
-      <button className="boton-comprar">Comprar</button>
+      <button className="boton-comprar" onClick={onComprar}>Comprar</button> {/* Usando la función pasada */}
     </div>
   );
 };

@@ -1,0 +1,30 @@
+.form-page {
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+
+  button {
+    margin-top: 20px; 
+    padding: 10px 20px;
+    background-color: black;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #C4E6E2;
+    color: black;
+  }
+}
+
+

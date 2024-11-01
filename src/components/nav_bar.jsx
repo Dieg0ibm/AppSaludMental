@@ -29,7 +29,7 @@ export const NavBar = () => {
         </NavLink>
 
         <NavLink className={navLinkClass} to='/configuraciones' aria-label='Configuraciones'>
-          <FaBars size={24} /> {/* Use another icon or same icon for configurations */}
+          <FaBars size={24} /> 
         </NavLink>
       </div>
     </nav>

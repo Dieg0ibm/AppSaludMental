@@ -1,53 +1,64 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
+const questions = {
+  estrés: [
+    { id: 1, question: "¿Cómo te sientes emocionalmente hoy?", type: "dropdown", options: ["Feliz", "Triste", "Ansioso", "Enojado"] },
+    { id: 2, question: "Califica tu nivel de estrés de 1 a 10:", type: "slider" },
+    { id: 3, question: "¿Has tenido algún desencadenante de estrés hoy?", type: "switch" },
+  ],
+  sueño: [
+    { id: 4, question: "¿Cuántas horas dormiste anoche?", type: "input" },
+    { id: 5, question: "¿Te despertaste durante la noche?", type: "switch" },
+    { id: 6, question: "¿Cómo calificarías la calidad de tu sueño?", type: "dropdown", options: ["Muy mala", "Mala", "Regular", "Buena", "Muy buena"] },
+  ],
+  ejercicio: [
+    { id: 7, question: "¿Has realizado actividad física hoy?", type: "switch" },
+    { id: 8, question: "¿Cuánto tiempo dedicaste a hacer ejercicio?", type: "input" },
+    { id: 9, question: "¿Qué tipo de ejercicio realizaste?", type: "dropdown", options: ["Correr", "Nadar", "Gimnasio", "Yoga"] },
+  ]
+};
 
 export const FormPage = () => {
-  const [emotionalState, setEmotionalState] = useState('');
-  const [energyLevel, setEnergyLevel] = useState(0);
-  const [physicalActivity, setPhysicalActivity] = useState(false);
+  const navigate = useNavigate();
 
-  const handleEmotionalChange = (e) => {
-    setEmotionalState(e.target.value);
+  const [currentCategory, setCurrentCategory] = useState('estrés');
+  const [responses, setResponses] = useState({});
+
+  const handleResponseChange = (id, value) => {
+    setResponses(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleEnergyChange = (e) => {
-    setEnergyLevel(e.target.value);
-  };
+  const handleNextCategory = () => {
+    if (currentCategory === 'estrés') setCurrentCategory('sueño');
+    else if (currentCategory === 'sueño') setCurrentCategory('ejercicio');
+    else {
+      alert('Gracias por completar la encuesta!')
+      navigate('/');
 
-  const handleActivityChange = () => {
-    setPhysicalActivity(!physicalActivity);
+    }
   };
 
   return (
-    <div className="form-page">
-      <p>¿Cómo te sientes emocionalmente hoy?</p>
-      <select value={emotionalState} onChange={handleEmotionalChange}>
-        <option value="">Selecciona...</option>
-        <option value="feliz">Feliz</option>
-        <option value="triste">Triste</option>
-      </select>
+    <div className='form-page'>
+      <h1>Encuesta Diaria</h1>
 
-      <p>¿Cómo calificas tu nivel de energía?</p>
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value={energyLevel}
-        onChange={handleEnergyChange}
-      />
-      <span>{energyLevel}</span>
-
-      <p>¿Has hecho actividad física hoy?</p>
-      <label>
-        <input
-          type="checkbox"
-          checked={physicalActivity}
-          onChange={handleActivityChange}
-        />
-        Sí/No
-      </label>
-
+      {questions[currentCategory].map(q => (
+        <div key={q.id}>
+          <p>{q.question}</p>
+          {q.type === 'input' && <input type="text" onChange={(e) => handleResponseChange(q.id, e.target.value)} />}
+          {q.type === 'slider' && <input type="range" min="1" max="10" onChange={(e) => handleResponseChange(q.id, e.target.value)} />}
+          {q.type === 'switch' && <input type="checkbox" onChange={(e) => handleResponseChange(q.id, e.target.checked)} />}
+          {q.type === 'dropdown' && (
+            <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
+              <option value="">Selecciona una opción</option>
+              {q.options.map(option => <option key={option} value={option}>{option}</option>)}
+            </select>
+          )}
+        </div>
+      ))}
       <div className="button-container">
-        <button>Enviar</button>
+        <button onClick={handleNextCategory}>Siguiente</button>
       </div>
     </div>
   );

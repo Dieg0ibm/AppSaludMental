@@ -11,9 +11,10 @@ const HomePage = () => {
 
   // Array de elementos estadísticos
   const items = [
-    { nombre: "Sombrero Bruja", icono: sombreroIcon }, // Cambié lentesIcon a sombreroIcon
-    { nombre: "Lentes", icono: lentesIcon },
-    { nombre: "Monedas", icono: 'coins' }, // Añadido icono de monedas como ejemplo
+    { nombre: "Sueño", icono: 'bed' },
+    { nombre: "", icono: 'animo' },
+    { nombre: "", icono: 'estres' }, 
+    { nombre: "", icono: 'gym' }, 
   ];
 
   // Manejo del clic en los elementos
@@ -30,7 +31,7 @@ const HomePage = () => {
         <EstadisticaItem
           key={index}
           nombre={item.nombre}
-          icono={item.icono}
+          icono={item.icono} // Pasando el icono como string
           onVer={() => handleVer(item.nombre)} // Llamando a la función handleVer con el nombre
         />
       ))}

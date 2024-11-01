@@ -53,17 +53,28 @@ export const FormPage = () => {
           <p>{q.question}</p>
           {q.type === 'input' && <input type="text" onChange={(e) => handleResponseChange(q.id, e.target.value)} />}
           {q.type === 'slider' && (
-            <div>
+            <div className="slider-container">
               <input 
                 type="range" 
                 min="1" 
                 max="10" 
+                value={responses[q.id] || 1} 
                 onChange={(e) => handleResponseChange(q.id, e.target.value)} 
               />
-              <span>{responses[q.id] || 0}</span>
+              <span>{responses[q.id] || 1}</span> 
             </div>
           )}
-          {q.type === 'switch' && <input type="checkbox" onChange={(e) => handleResponseChange(q.id, e.target.checked)} />}
+
+          {q.type === 'switch' && (
+            <div className="checkbox-container">
+              <input 
+                type="checkbox" 
+                onChange={(e) => handleResponseChange(q.id, e.target.checked)} 
+              />
+            </div>
+          )}
+
+
           {q.type === 'dropdown' && (
             <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
               <option value="">Selecciona una opción</option>

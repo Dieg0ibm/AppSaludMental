@@ -17,9 +17,7 @@ const HomePage = () => {
 
   // Manejo del clic en los elementos
   const handleVer = (nombre) => {
-    console.log(`Ver detalles de ${nombre}`);
-    // Aquí podrías navegar a otra página si lo deseas
-    // navigate(`/detalle/${nombre.toLowerCase()}`);
+    navigate(`/estadistica/${nombre.toLowerCase()}`);
   };
 
   return (

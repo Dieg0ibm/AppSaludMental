@@ -20,13 +20,14 @@ const HomePage = () => {
     navigate(`/estadistica/${nombre.toLowerCase()}`);
   };
 
+
   return (
     <div className="homepage">
       <h1 className="homepage-titulo">¡Hola, humano! 🐾 Soy tu mascota y estoy aquí para ayudarte. Quiero saber cómo te sientes hoy. ¡Presióname y cuéntame!</h1>
       <button className='boton-mascota' onClick={() => navigate('/form')}>
         <img src={mascota} alt="Mascota" className='mascota' />
       </button>
-      <button className='apoyo-boton' onClick={() => console.log("Mostrar recursos de apoyo")}>
+      <button className='apoyo-boton' onClick={() => navigate(`/recursos`)}>
         <h2 className="Recursos-Apoyo"> Recursos de apoyo </h2>
       </button>
       {items.map((item, index) => (

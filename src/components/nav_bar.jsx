@@ -13,23 +13,17 @@ export const NavBar = () => {
       {/* <h1 className='nav-bar__title'>aplicación salud mental</h1> */}
 
       <NavLink className={navLinkClass} to='/' aria-label='Inicio'>
-        <FaHome size={24} />
+        <FaHome size={28} />
       </NavLink>
 
       <div className="nav-bar__right-links">
-        <NavLink
-          className={navLinkClass}
-          to='/lightbulb'
-        >
-          Ampolleta
-        </NavLink>
 
         <NavLink className={navLinkClass} to='/tienda' aria-label='Tienda'>
-          <FaShoppingCart size={24} /> 
+          <FaShoppingCart size={28} /> 
         </NavLink>
 
         <NavLink className={navLinkClass} to='/configuraciones' aria-label='Configuraciones'>
-          <FaBars size={24} /> 
+          <FaBars size={28} /> 
         </NavLink>
       </div>
     </nav>

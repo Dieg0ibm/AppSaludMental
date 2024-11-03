@@ -23,7 +23,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <h1 className="homepage-titulo">¡Hola, humano! 🐾 Soy tu mascota y estoy aquí para ayudarte. Quiero saber cómo te sientes hoy. ¡Presióname y cuéntame!</h1>
+      <h1 className="burbuja-texto">¡Hola! Soy tu mascota y estoy aquí para ayudarte. Quiero saber cómo te sientes hoy. ¡Pulsa sobre mi para contarme!🐾</h1>
       <button className='boton-mascota' onClick={() => navigate('/form')}>
         <img src={mascota} alt="Mascota" className='mascota' />
       </button>

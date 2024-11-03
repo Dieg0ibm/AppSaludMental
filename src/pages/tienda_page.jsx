@@ -1,7 +1,9 @@
 import React from 'react';
 import TiendaItem from '../components/tienda_item';
 import sombreroIcon from '../assets/gorro-bruja.png';
+import moñoIcon from '../assets/corbata.png';
 import lentesIcon from '../assets/lentes.png';
+import cadenaIcon from '../assets/cadena.png';
 import { useNavigate } from 'react-router-dom';
 import { FaCoins } from "react-icons/fa";
 
@@ -10,10 +12,10 @@ const TiendaPage = () => {
   const navigate = useNavigate();
 
   const items = [
-    { nombre: "Sombrero Bruja", precio: 600, icono: sombreroIcon },
-    { nombre: "Lentes Oscuros", precio: 1000, icono: lentesIcon },
-    { nombre: "Escudo Viking", precio: 600, icono: sombreroIcon },
-    { nombre: "Botas", precio: 400, icono: sombreroIcon },
+    { nombre: "Sombrero Bruja", precio: '600', icono: sombreroIcon },
+    { nombre: "Moño Rojo", precio: '800', icono: moñoIcon },
+    { nombre: "Lentes Oscuros", precio: '1.000', icono: lentesIcon },
+    { nombre: "Cadena de Oro", precio: '10.000', icono: cadenaIcon },
     // Agrega más elementos según sea necesario
   ];
 

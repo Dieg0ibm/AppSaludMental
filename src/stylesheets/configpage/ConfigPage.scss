@@ -1,0 +1,73 @@
+.config-container {
+    background-color: #C4E6E2;
+    min-height: 100vh; 
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+}
+  
+.config-options {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    margin-top: 20px; 
+}
+
+.notification-switch,
+.language-select {
+    margin-bottom: 20px; 
+}
+
+.label-bold {
+    font-weight: bold; 
+}
+
+/* Estilos del switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; // Ajusta el ancho del switch
+    height: 34px; // Ajusta la altura del switch
+    margin-left: 10px; // Espacio entre el texto y el switch
+}
+
+.switch input {
+    opacity: 0; // Oculta el input real
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; // Color del fondo del switch
+    transition: .4s; // Transición suave
+    border-radius: 34px; // Bordes redondeados
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; // Altura del círculo del switch
+    width: 26px; // Ancho del círculo del switch
+    left: 4px; // Espacio a la izquierda
+    bottom: 4px; // Espacio abajo
+    background-color: white; // Color del círculo del switch
+    transition: .4s; // Transición suave
+    border-radius: 50%; // Hace el círculo
+}
+
+/* Cambios de estado del switch */
+input:checked + .slider {
+    background-color: #2196F3; // Color del fondo cuando está activado
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); // Desplaza el círculo a la derecha
+}

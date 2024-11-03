@@ -10,7 +10,7 @@ const TiendaPage = () => {
   const navigate = useNavigate();
 
   const items = [
-    { nombre: "Sombrero Bruja", icono: sombreroIcon },
+    { nombre: "Sombrero Bruja", precio: 600, icono: sombreroIcon },
     { nombre: "Lentes Oscuros", precio: 1000, icono: lentesIcon },
     { nombre: "Escudo Viking", precio: 600, icono: sombreroIcon },
     { nombre: "Botas", precio: 400, icono: sombreroIcon },

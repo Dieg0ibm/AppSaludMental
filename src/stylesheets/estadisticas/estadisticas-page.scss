@@ -1,20 +1,18 @@
-///////////////////////////////////////// Estilos para la página de Estres /////////////////////////////////////////
 .estres {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 
-  // Estilo para el título
   .titulo {
     font-size: 24px;
     font-weight: bold;
-    color: #555;
+    color: #000;
+    margin-top: 5px;
     margin-bottom: 15px;
     text-align: center;
   }
 
-  // Estilo para la imagen del gráfico
   .grafico {
     width: 95%;
     max-width: 600px;
@@ -24,12 +22,11 @@
     margin-bottom: 20px;
   }
 
-  // Estilo para la burbuja de diálogo
   .burbuja-texto {
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
-    background-color: #FFD5C8; // Fondo de la burbuja
+    color: #000;
+    background-color: #FFD5C8;
     padding: 12px 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -38,22 +35,19 @@
     margin-bottom: 20px;
     position: relative;
 
-    // Triángulo para la "cola" de la burbuja
     &::after {
       content: "";
       position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
+      bottom: -20px;
+      left: 65%;
       width: 0;
       height: 0;
       border: 10px solid transparent;
-      border-top-color: #FFD5C8; // Color de la "cola"
+      border-top-color: #FFD5C8;
       transform: rotate(0deg);
     }
   }
 
-
-  // Estilo para la imagen de la mascota
   .mascota {
     width: 90%;
     height: auto;
@@ -61,24 +55,21 @@
   }
 }
 
-
-///////////////////////////////////////// Estilos para la página de Sueño /////////////////////////////////////////
 .sueño {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 
-  // Estilo para el título
   .titulo {
     font-size: 24px;
     font-weight: bold;
-    color: #555;
+    color: #000;
+    margin-top: 5px;
     margin-bottom: 15px;
     text-align: center;
   }
 
-  // Estilo para la imagen del gráfico
   .grafico {
     width: 95%;
     max-width: 600px;
@@ -88,12 +79,11 @@
     margin-bottom: 20px;
   }
 
-  // Estilo para la burbuja de diálogo
   .burbuja-texto {
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
-    background-color: #B2E0F4; // Fondo de la burbuja
+    color: #000;
+    background-color: #B2E0F4;
     padding: 12px 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -102,49 +92,19 @@
     margin-bottom: 20px;
     position: relative;
 
-    // Triángulo para la "cola" de la burbuja
     &::after {
       content: "";
       position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
+      bottom: -20px;
+      left: 65%;
       width: 0;
       height: 0;
       border: 10px solid transparent;
-      border-top-color: #B2E0F4; // Color de la "cola"
+      border-top-color: #B2E0F4;
       transform: rotate(0deg);
     }
   }
 
-  // Estilo para la burbuja de diálogo
-  .burbuja-texto-sueño {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    background-color: #B2E0F4; // Fondo de la burbuja
-    padding: 12px 20px;
-    border-radius: 20px;
-    max-width: 70%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    position: relative;
-
-    // Triángulo para la "cola" de la burbuja
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top-color: #B2E0F4; // Color de la "cola"
-      transform: rotate(0deg);
-    }
-  }
-
-  // Estilo para la imagen de la mascota
   .mascota {
     width: 90%;
     height: auto;
@@ -152,23 +112,21 @@
   }
 }
 
-///////////////////////////////////////// Estilos para la página de Animo /////////////////////////////////////////
 .animo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 
-  // Estilo para el título
   .titulo {
     font-size: 24px;
     font-weight: bold;
-    color: #555;
+    color: #000;
+    margin-top: 5px;
     margin-bottom: 15px;
     text-align: center;
   }
 
-  // Estilo para la imagen del gráfico
   .grafico {
     width: 95%;
     max-width: 600px;
@@ -178,12 +136,11 @@
     margin-bottom: 20px;
   }
 
-  // Estilo para la burbuja de diálogo
   .burbuja-texto {
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
-    background-color: #F9E79F; // Fondo de la burbuja
+    color: #000;
+    background-color: #F9E79F;
     padding: 12px 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -192,49 +149,19 @@
     margin-bottom: 20px;
     position: relative;
 
-    // Triángulo para la "cola" de la burbuja
     &::after {
       content: "";
       position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
+      bottom: -20px;
+      left: 65%;
       width: 0;
       height: 0;
       border: 10px solid transparent;
-      border-top-color: #F9E79F; // Color de la "cola"
+      border-top-color: #F9E79F;
       transform: rotate(0deg);
     }
   }
 
-  // Estilo para la burbuja de diálogo
-  .burbuja-texto-sueño {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    background-color: #F9E79F; // Fondo de la burbuja
-    padding: 12px 20px;
-    border-radius: 20px;
-    max-width: 70%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    position: relative;
-
-    // Triángulo para la "cola" de la burbuja
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top-color: #B2E0F4; // Color de la "cola"
-      transform: rotate(0deg);
-    }
-  }
-
-  // Estilo para la imagen de la mascota
   .mascota {
     width: 90%;
     height: auto;
@@ -242,23 +169,21 @@
   }
 }
 
-///////////////////////////////////////// Estilos para la página de ejercicio /////////////////////////////////////////
 .ejercicio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 
-  // Estilo para el título
   .titulo {
     font-size: 24px;
     font-weight: bold;
-    color: #555;
+    color: #000;
+    margin-top: 5px;
     margin-bottom: 15px;
     text-align: center;
   }
 
-  // Estilo para la imagen del gráfico
   .grafico {
     width: 95%;
     max-width: 600px;
@@ -268,12 +193,11 @@
     margin-bottom: 20px;
   }
 
-  // Estilo para la burbuja de diálogo
   .burbuja-texto {
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
-    background-color: #A9DFBF; // Fondo de la burbuja
+    color: #000;
+    background-color: #A9DFBF;
     padding: 12px 20px;
     border-radius: 20px;
     max-width: 70%;
@@ -282,49 +206,19 @@
     margin-bottom: 20px;
     position: relative;
 
-    // Triángulo para la "cola" de la burbuja
     &::after {
       content: "";
       position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
+      bottom: -20px;
+      left: 65%;
       width: 0;
       height: 0;
       border: 10px solid transparent;
-      border-top-color: #A9DFBF; // Color de la "cola"
+      border-top-color: #A9DFBF;
       transform: rotate(0deg);
     }
   }
 
-  // Estilo para la burbuja de diálogo
-  .burbuja-texto-sueño {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    background-color: #A9DFBF; // Fondo de la burbuja
-    padding: 12px 20px;
-    border-radius: 20px;
-    max-width: 70%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    position: relative;
-
-    // Triángulo para la "cola" de la burbuja
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -20px; // Posición de la "cola"
-      left: 65%; // Ajuste horizontal de la "cola"
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-top-color: #B2E0F4; // Color de la "cola"
-      transform: rotate(0deg);
-    }
-  }
-
-  // Estilo para la imagen de la mascota
   .mascota {
     width: 90%;
     height: auto;

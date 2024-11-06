@@ -10,7 +10,7 @@ const HomePage = () => {
     { nombre: "Sueño", icono: 'bed', color: '#B2E0F4' }, // Color azul para Sueño
     { nombre: "Ánimo", icono: 'animo', color: '#F9E79F' }, // Color amarillo  para Ánimo
     { nombre: "Estrés", icono: 'estres', color: '#F5B7B1' }, // Color rosa para Estrés
-    { nombre: "Ejercicio", icono: 'gym', color: '#A9DFBF' }, // Color verde para Ejercicio
+    { nombre: "Actividad Física", icono: 'gym', color: '#A9DFBF' }, // Color verde para Ejercicio
   ];
 
   const handleVer = (nombre) => {

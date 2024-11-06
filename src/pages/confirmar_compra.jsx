@@ -6,8 +6,7 @@ const ConfirmarCompra = () => {
   const navigate = useNavigate();
 
   const handleConfirm = () => {
-    alert(`¡Has respondido con éxito!`);
-    navigate('/homepage');
+    navigate('/');
   };
 
   const handleCancel = () => {

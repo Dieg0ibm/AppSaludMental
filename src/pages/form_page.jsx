@@ -13,7 +13,7 @@ const questions = {
     { id: 6, question: "¿Cómo calificarías la calidad de tu sueño?", type: "dropdown", options: ["Muy mala", "Mala", "Regular", "Buena", "Muy buena"] },
   ],
   ejercicio: [
-    { id: 8, question: "¿Cuánto tiempo dedicaste a hacer ejercicio?", type: "input" },
+    { id: 8, question: "¿Cuántas horas dedicaste a hacer ejercicio?", type: "input" },
     { id: 9, question: "¿Qué tipo de ejercicio realizaste?", type: "dropdown", options: ["Fuerza", "Correr", "Deporte"] },
     { id: 10, question: "¿Cuántos pasos llevas hoy?", type: "input" },
   ]

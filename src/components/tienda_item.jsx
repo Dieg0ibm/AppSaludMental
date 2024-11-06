@@ -12,7 +12,7 @@ const TiendaItem = ({ nombre, precio, icono, onComprar }) => {
         <FaCoins size={24} />
         <span>{precio}</span>
       </div>
-      <button className="boton-comprar" onClick={onComprar}>Comprar</button> {/* Usando la función pasada */}
+      <button className="boton-comprar" onClick={onComprar}>Comprar</button>
     </div>
   );
 };

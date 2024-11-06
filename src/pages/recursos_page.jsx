@@ -17,9 +17,10 @@ const RecursosPage = () => {
   ];
 
   const handleRecurso = (nombre) => {
-    navigate(`/recursos/${nombre.toLowerCase()}`);
+    alert('Pronto te redirigiremos a un recurso externo que puede ser útil.');
   };
-
+  
+  
   return (
     <div className="recursos">
       <h1 className="recursos-titulo">Recursos de Apoyo</h1>

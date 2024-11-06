@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCoins, FaBed } from "react-icons/fa";
+import { FaBed } from "react-icons/fa";
 import { ImFrustrated, ImHappy } from "react-icons/im";
 import { BiRun } from "react-icons/bi";
 
@@ -27,17 +27,17 @@ const EstadisticaItem = ({ nombre, icono, onVer, color }) => {
         display: 'flex', 
         alignItems: 'center', 
         border: 'none', 
-        background: 'none', // Sin fondo para el botón
+        background: 'none', 
         cursor: 'pointer' 
       }}
     >
       <h3 style={{ margin: 0, flex: 1, textAlign: 'left' }}>{nombre}</h3>
       <div className='icono-contenedor' style={{ 
-          background: color, // Aplica el color de fondo al contenedor del icono
-          borderRadius: '50%', // Opcional: hacer el contenedor del icono redondeado
-          padding: '8px', // Espaciado interno del contenedor
+          background: color, 
+          borderRadius: '50%', 
+          padding: '8px', 
         }}>
-        {renderIcon()} {/* Solo se llama a renderIcon() una vez */}
+        {renderIcon()}
       </div>
     </button>
   );

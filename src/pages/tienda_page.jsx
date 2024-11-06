@@ -16,11 +16,9 @@ const TiendaPage = () => {
     { nombre: "Moño Rojo", precio: '800', icono: moñoIcon },
     { nombre: "Lentes Oscuros", precio: '1.000', icono: lentesIcon },
     { nombre: "Cadena de Oro", precio: '10.000', icono: cadenaIcon },
-    // Agrega más elementos según sea necesario
   ];
 
-  const handleComprar = (nombre, precio) => {
-    // Muestra un diálogo de confirmación
+  const handleComprar = (nombre) => {
     navigate(`/confirmar-compra/${nombre}`);
   };
 
@@ -33,7 +31,7 @@ const TiendaPage = () => {
           nombre={item.nombre}
           precio={item.precio}
           icono={item.icono}
-          onComprar={() => handleComprar(item.nombre, item.precio)} // Pasa la función de compra
+          onComprar={() => handleComprar(item.nombre, item.precio)}
         />
       ))}
     </div>

@@ -4,13 +4,14 @@ import HomePage from '../pages/home_page';
 import TiendaPage from '../pages/tienda_page';
 import ConfigPage from '../pages/config_page';
 import FormPage from '../pages/form_page';
-import ConfirmarCompra from '../pages/confirmar_compra'; // Importa el nuevo componente
+import ConfirmarCompra from '../pages/confirmar_compra';
 import NavBar from '../components/nav_bar';
 import SuenoPage from '../pages/sueno_page';
 import AnimoPage from '../pages/animo_page';
 import EjercicioPage from '../pages/ejercicio_page';
 import EstresPage from '../pages/estres_page';
 import RecursosPage from '../pages/recursos_page';
+import ConfirmarForm from '../pages/confirmar_form';
 
 const Layout = () => {
   return (
@@ -29,6 +30,7 @@ const Layout = () => {
             <Route path='/estadistica/ejercicio' element={<EjercicioPage />} />
             <Route path='/estadistica/estrés' element={<EstresPage />} />
             <Route path='/recursos' element={<RecursosPage />} />
+            <Route path='/form/confirmar' element={<ConfirmarForm />} />
           </Routes>
         </div>
       </div>

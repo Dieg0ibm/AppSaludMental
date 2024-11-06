@@ -33,8 +33,7 @@ export const FormPage = () => {
     if (currentCategory === 'estrés') setCurrentCategory('sueño');
     else if (currentCategory === 'sueño') setCurrentCategory('ejercicio');
     else {
-      alert('Gracias por completar la encuesta!')
-      navigate('/');
+      navigate('/form/confirmar');
     }
   };
 

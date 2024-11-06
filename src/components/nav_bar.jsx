@@ -10,7 +10,6 @@ export const NavBar = () => {
   }
   return (
     <nav className='nav-bar'>
-      {/* <h1 className='nav-bar__title'>aplicación salud mental</h1> */}
 
       <NavLink className={navLinkClass} to='/' aria-label='Inicio'>
         <FaHome size={28} />

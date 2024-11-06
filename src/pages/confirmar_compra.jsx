@@ -1,19 +1,17 @@
-// src/pages/ConfirmarCompra.jsx
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const ConfirmarCompra = () => {
-  const { nombre } = useParams(); // Obtiene el nombre del artículo de los parámetros de la URL
-  const navigate = useNavigate(); // Hook para navegar entre rutas
+  const { nombre } = useParams();
+  const navigate = useNavigate();
 
   const handleConfirm = () => {
-    // Aquí puedes agregar la lógica para procesar la compra.
-    alert(`¡Has comprado "${nombre}" con éxito!`);
-    navigate('/tienda'); // Redirige a la tienda después de la compra
+    alert(`¡Has respondido con éxito!`);
+    navigate('/homepage');
   };
 
   const handleCancel = () => {
-    navigate('/tienda'); // Redirige a la tienda si el usuario cancela
+    navigate('/tienda');
   };
 
   return (
@@ -27,8 +25,6 @@ const ConfirmarCompra = () => {
     </div>
   );
 };
-
-// Estilos en línea para simplificar la presentación
 const styles = {
   container: {
     display: 'flex',

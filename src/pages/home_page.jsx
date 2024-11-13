@@ -14,7 +14,11 @@ const HomePage = () => {
   ];
 
   const handleVer = (nombre) => {
-    navigate(`/estadistica/${nombre.toLowerCase()}`);
+    if (nombre == 'Ánimo') navigate(`/estadistica/animo`);
+    if (nombre == 'Estrés') navigate(`/estadistica/estres`);
+    if (nombre == 'Sueño') navigate(`/estadistica/sueno`);
+    if (nombre == "Actividad Física") navigate(`/estadistica/actividad_fisica`);
+    
   };
 
 

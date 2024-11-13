@@ -25,10 +25,10 @@ const Layout = () => {
             <Route path='/configuraciones' element={<ConfigPage />} />
             <Route path='/form' element={<FormPage />} />
             <Route path='/confirmar-compra/:nombre' element={<ConfirmarCompra />} />
-            <Route path='/estadistica/sueño' element={<SuenoPage />} />
-            <Route path='/estadistica/ánimo' element={<AnimoPage />} />
+            <Route path='/estadistica/sueno' element={<SuenoPage />} />
+            <Route path='/estadistica/animo' element={<AnimoPage />} />
             <Route path='/estadistica/ejercicio' element={<EjercicioPage />} />
-            <Route path='/estadistica/estrés' element={<EstresPage />} />
+            <Route path='/estadistica/estres' element={<EstresPage />} />
             <Route path='/recursos' element={<RecursosPage />} />
             <Route path='/form/confirmar' element={<ConfirmarForm />} />
           </Routes>

@@ -17,7 +17,7 @@ const ConfirmarCompra = () => {
   return (
     <div className="confirmar-compra" style={styles.container}>
       <h2>Confirmar Compra</h2>
-      <p>¿Estás seguro de que deseas comprar "{nombre}"?</p>
+      <p>Comprarás "{nombre}", confirmar:</p>
       <div style={styles.buttonContainer}>
         <button style={styles.button} onClick={handleConfirm}>Sí</button>
         <button style={styles.button} onClick={handleCancel}>No</button>

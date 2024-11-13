@@ -23,6 +23,12 @@
     background: transparent;
   }
 
+  @media (min-width: 1024px) {
+    .mascota {
+      width: 10vw;
+    }
+  }
+  
   .boton-mascota {
     background: transparent;
     border: none;
@@ -93,7 +99,7 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-   // Cola de la burbuja de texto
+  // Cola de la burbuja de texto celular
   &::after {
     content: "";
     position: absolute;
@@ -104,5 +110,26 @@
     border: 25px solid transparent;
     border-top-color: #e7e5e5;
     transform: rotate(0deg);
+  }
+}
+// Cola de la burbuja desktop
+@media (min-width: 1024px) {
+  .burbuja-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    padding: 8px 16px; 
+    max-width: 50%; 
+    min-height: auto; 
+  }
+  
+  .burbuja-texto::after {
+    bottom: auto;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 25px solid transparent;
+    border-left-color: #e7e5e5;
   }
 }

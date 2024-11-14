@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../stylesheets/configpage/ConfigPage.scss';
 
 export const ConfigPage = () => {
   const [notificaciones, setNotificaciones] = useState(false);

@@ -8,7 +8,7 @@ const ConfirmarForm = () => {
   return (
     <div className="confirmar-form">
       <h1 className="titulo">¡Has respondido la encuesta con éxito!</h1>
-      <h2 className="recompensa"> +<FaCoins size={30}/>500</h2>
+      <h2 className="recompensa"> + <FaCoins size={30}/> 500</h2>
       <button className='boton-home' onClick={() => navigate('/')}>
         <h2>Volver a la página principal</h2>
       </button>

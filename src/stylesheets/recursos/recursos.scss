@@ -12,6 +12,16 @@
     margin-bottom: 2px;
     text-align: center;
   }
+
+  .boton-retroceso {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 105px;
+    left: 5px;
+    cursor: pointer;
+  }
+  
 }
 
 .recurso-item {

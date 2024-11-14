@@ -5,6 +5,7 @@ import { GiMeditation, GiNightSleep } from "react-icons/gi";
 import { MdSportsGymnastics } from "react-icons/md";
 import { RiMentalHealthLine } from "react-icons/ri";
 import mascota from '../assets/mascota.png';
+import { IoArrowBackSharp } from "react-icons/io5";
 
 const RecursosPage = () => {
   const navigate = useNavigate();
@@ -23,6 +24,9 @@ const RecursosPage = () => {
   
   return (
     <div className="recursos">
+      <button className='boton-retroceso' onClick={() => navigate(-1)}>
+        <IoArrowBackSharp className="icono" size={40} />
+      </button>
       <h1 className="recursos-titulo">Recursos de Apoyo</h1>
       {items.map((item, index) => (
         <RecursoItem

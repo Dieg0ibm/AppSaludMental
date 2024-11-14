@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const questions = {
   estrés: [
     { id: 1, question: "¿Cómo te sientes?", type: "dropdown", options: ["Feliz", "Triste", "Ansioso", "Enojado"] },
-    { id: 2, question: "Califica tu nivel de estrés de 1 a 10:", type: "slider" },
+    { id: 2, question: "Califica tu nivel de estrés de 1 a 5:", type: "slider" },
     { id: 3, question: "¿Cuál ha sido tu mayor fuente de estrés estos últimos días", type: "dropdown", options: ["Estudio/Trabajo", "Familia", "Salud", "Finanzas", "Otros"] },
   ],
   sueño: [
@@ -56,7 +56,7 @@ export const FormPage = () => {
               <input 
                 type="range" 
                 min="1" 
-                max="10" 
+                max="5" 
                 value={responses[q.id] || 1} 
                 onChange={(e) => handleResponseChange(q.id, e.target.value)} 
               />

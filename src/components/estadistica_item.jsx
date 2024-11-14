@@ -20,22 +20,10 @@ const EstadisticaItem = ({ nombre, icono, onVer, color }) => {
   };
 
   return (
-    <button 
-      className="estadistica-item" 
-      onClick={onVer} 
-      style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        border: 'none', 
-        background: 'none', 
-        cursor: 'pointer' 
-      }}
-    >
-      <h3 style={{ margin: 0, flex: 1, textAlign: 'left' }}>{nombre}</h3>
+    <button className="estadistica-item" onClick={onVer}>
+      <h3>{nombre}</h3>
       <div className='icono-contenedor' style={{ 
-          background: color, 
-          borderRadius: '50%', 
-          padding: '8px', 
+          background: color
         }}>
         {renderIcon()}
       </div>

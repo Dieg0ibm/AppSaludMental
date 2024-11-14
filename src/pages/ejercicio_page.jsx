@@ -4,7 +4,7 @@ import grafico from '../assets/ejercicio.jpg';
 import mascota from '../assets/mascota.png';
 import { IoArrowBackSharp } from "react-icons/io5";
 
-const EstresPage = () => {
+const EjercicioPage = () => {
   const navigate = useNavigate();
 
   return (
@@ -20,4 +20,4 @@ const EstresPage = () => {
   );
 };
 
-export default EstresPage;
+export default EjercicioPage;

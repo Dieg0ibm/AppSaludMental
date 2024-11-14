@@ -4,7 +4,7 @@ import grafico from '../assets/sueño.jpg';
 import mascota from '../assets/mascota.png';
 import { IoArrowBackSharp } from "react-icons/io5";
 
-const EstresPage = () => {
+const SuenoPage = () => {
   const navigate = useNavigate();
 
   return (
@@ -20,5 +20,5 @@ const EstresPage = () => {
   );
 };
 
-export default EstresPage;
+export default SuenoPage;
 

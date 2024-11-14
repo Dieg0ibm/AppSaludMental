@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const questions = {
   estrés: [
-    { id: 1, question: "¿Cómo te sientes?", type: "dropdown", options: ["Feliz", "Triste", "Ansioso", "Enojado"] },
+    { id: 1, question: "¿Cómo te sientes?", type: "dropdown", options: ["😊 Feliz", "😢 Triste", "😰 Ansioso", "😡 Enojado"] },
     { id: 2, question: "Califica tu nivel de estrés de 1 a 5:", type: "slider" },
     { id: 3, question: "¿Cuál ha sido tu mayor fuente de estrés estos últimos días", type: "dropdown", options: ["Estudio/Trabajo", "Familia", "Salud", "Finanzas", "Otros"] },
   ],
@@ -73,16 +73,36 @@ export const FormPage = () => {
             </div>
           )}
 
-
-          {q.type === 'dropdown' && (
-            <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
-              <option value="">Selecciona una opción</option>
-              {q.options.map(option => <option key={option} value={option}>{option}</option>)}
-            </select>
+          {q.type === 'dropdown' && q.id === 1 ? (
+            <>
+              <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
+                <option value="">Selecciona una opción</option>
+                <option value="😊 Feliz">😊 Feliz</option>
+                <option value="😢 Triste">😢 Triste</option>
+                <option value="😟 Ansioso">😟 Ansioso</option>
+                <option value="😡 Enojado">😡 Enojado</option>
+                <option value="custom">Otro (especificar)</option>
+              </select>
+              
+              {responses[q.id] === "custom" && (
+                <input 
+                  type="text" 
+                  placeholder="Especifica cómo te sientes" 
+                  onChange={(e) => handleResponseChange(`${q.id}_custom`, e.target.value)} 
+                />
+              )}
+            </>
+          ) : (
+            q.type === 'dropdown' && (
+              <select onChange={(e) => handleResponseChange(q.id, e.target.value)}>
+                <option value="">Selecciona una opción</option>
+                {q.options.map(option => <option key={option} value={option}>{option}</option>)}
+              </select>
+            )
           )}
         </div>
-
       ))}
+
       <div className="button-container">
         <button onClick={handlePreviousCategory}>Atrás</button>
         <button onClick={handleNextCategory}>Siguiente</button>

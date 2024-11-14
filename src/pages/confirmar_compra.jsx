@@ -15,37 +15,20 @@ const ConfirmarCompra = () => {
   };
 
   return (
-    <div className="confirmar-compra" style={styles.container}>
-      <h2>Confirmar Compra</h2>
-      <p>Comprarás "{nombre}", confirmar:</p>
-      <div style={styles.buttonContainer}>
-        <button style={styles.button} onClick={handleConfirm}>Sí</button>
-        <button style={styles.button} onClick={handleCancel}>No</button>
+    <div className="confirmar-compra">
+
+      <div className="texto-titulo">
+        <h2>Confirmar Compra</h2>
+        <p>Comprarás "{nombre}", confirmar:</p>
       </div>
+
+      <div className="button-container">
+        <button className="button" onClick={handleConfirm}>Sí</button>
+        <button className="button" onClick={handleCancel}>No</button>
+      </div>
+      
     </div>
   );
-};
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    textAlign: 'center',
-  },
-  buttonContainer: {
-    display: 'flex',
-    gap: '10px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s',
-  },
 };
 
 export default ConfirmarCompra;

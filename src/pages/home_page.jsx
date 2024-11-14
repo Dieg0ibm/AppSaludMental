@@ -17,7 +17,7 @@ const HomePage = () => {
     if (nombre == 'Ánimo') navigate(`/estadistica/animo`);
     if (nombre == 'Estrés') navigate(`/estadistica/estres`);
     if (nombre == 'Sueño') navigate(`/estadistica/sueno`);
-    if (nombre == "Actividad Física") navigate(`/estadistica/actividad_fisica`);
+    if (nombre == "Actividad Física") navigate(`/estadistica/ejercicio`);
     
   };
 

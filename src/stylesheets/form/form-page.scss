@@ -77,3 +77,15 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.category-image {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.category-image img {
+  max-width: 100%; 
+  height: auto; 
+  max-height: 300px; 
+}

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+import gatoDurmiendo from '../assets/gato-durmiendo.png';
+import gatoEmociones from '../assets/gato-emociones.jpg';
+import gatoEjercicio from '../assets/gato-ejercicio.jpg';
+
 const questions = {
   estrés: [
     { id: 1, question: "¿Cómo te sientes?", type: "dropdown", options: ["😊 Feliz", "😢 Triste", "😰 Ansioso", "😡 Enojado"] },
@@ -43,10 +47,25 @@ export const FormPage = () => {
     else if (currentCategory === 'estrés') navigate('/');
   };
 
+  const getCategoryImage = () => {
+    if (currentCategory === 'estrés') {
+      return gatoEmociones; 
+    } else if (currentCategory === 'sueño') {
+      return gatoDurmiendo;
+    } else if (currentCategory === 'ejercicio') {
+      return gatoEjercicio;  
+    }
+  };
+
   return (
     <div className='form-page'>
       <h1>Encuesta Diaria</h1>
 
+      <div className="category-image">
+        <img src={getCategoryImage()} alt={currentCategory} />
+      </div>
+
+      
       {questions[currentCategory].map(q => (
         <div key={q.id}>
           <p>{q.question}</p>

@@ -111,15 +111,26 @@
     border-top-color: #e7e5e5;
     transform: rotate(0deg);
   }
+
+  .encuesta-link {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline; 
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 // Cola de la burbuja desktop
 @media (min-width: 1024px) {
   .burbuja-texto {
-    display: flex;
+
     align-items: center;
     justify-content: center;
     min-height: 150px;
-    padding: 8px 16px; 
+    padding: 40px 16px; 
     max-width: 50%; 
     min-height: auto; 
   }

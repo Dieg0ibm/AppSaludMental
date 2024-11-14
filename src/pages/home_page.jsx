@@ -1,6 +1,6 @@
 import React from 'react';
 import EstadisticaItem from '../components/estadistica_item';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import mascota from '../assets/mascota.png';
 
 const HomePage = () => {
@@ -24,7 +24,9 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <h1 className="burbuja-texto">¡Hola! Soy tu mascota y estoy aquí para ayudarte. Quiero saber cómo te sientes hoy. ¡Pulsa sobre mí para contarme!🐾</h1>
+      <h1 className="burbuja-texto">
+        ¡Hola! Soy tu mascota y estoy aquí para ayudarte. Quiero saber cómo te sientes hoy. ¡Realiza la <Link to="/form" className="encuesta-link"> encuesta diaria</Link>!🐾
+      </h1>      
       <button className='boton-mascota' onClick={() => navigate('/form')}>
         <img src={mascota} alt="Mascota" className='mascota' />
       </button>
